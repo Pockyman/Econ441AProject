@@ -13,6 +13,7 @@
 #' duocol.api(URL, series_id, APIkey, observation_start)
 #' duocol.api("http://api.eia.gov/series/","TOTAL.TETCBUS.M","4b7fc3dfb09c8ce47ef1323ea2eb5619","197301")
 duocol.api <- function(URL, series_id, APIkey, observation_start){
+  library(jsonlite)
   parameter = paste(
     "?series_id=", series_id,
     "&api_key=", APIkey,

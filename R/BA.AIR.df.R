@@ -53,13 +53,5 @@ BA.AIR.df <- function(fromdate="2015-01-01"){
   rolling$lower_bound = rolling$mean - ( Z_score *  rolling$sd )
   rolling$higher_bound = rolling$mean + ( Z_score *  rolling$sd )
 
-  t <- 1:length(rolling$Spread)
-
-  plot <- ggplot(data=rolling, aes(x=t)) +
-    geom_line(aes(y=rolling$Spread),color="black") +
-    geom_line(aes(y=rolling$lower_bound),color="green",linetype="twodash") +
-    geom_line(aes(y=rolling$higher_bound),color="green",linetype="twodash") +
-    geom_line(aes(y=rolling$mean),color="red")
-
   return(rolling)
 }

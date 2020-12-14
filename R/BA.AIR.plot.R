@@ -7,6 +7,7 @@
 #'
 #' @examples
 #' BA.AIR.plot(fromdate)
+library(ggplot2)
 BA.AIR.plot <- function(fromdate="2015-01-01"){
 
   quantmod::getSymbols("BA",from=fromdate)

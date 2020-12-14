@@ -4,9 +4,11 @@
 \alias{duocol.api}
 \title{API Query}
 \usage{
-duocol.api(series_id, APIkey, observation_start)
+duocol.api(URL, series_id, APIkey, observation_start)
 }
 \arguments{
+\item{URL}{URL}
+
 \item{series_id}{Series id of API}
 
 \item{APIkey}{API key}
@@ -20,5 +22,6 @@ duocol.api(series_id, APIkey, observation_start)
 Duo column data
 }
 \examples{
-duocol.api(series_id, APIkey, observation_start)
+duocol.api(URL, series_id, APIkey, observation_start)
+duocol.api("http://api.eia.gov/series/","TOTAL.TETCBUS.M","4b7fc3dfb09c8ce47ef1323ea2eb5619","197301")
 }

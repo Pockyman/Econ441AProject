@@ -1,6 +1,7 @@
 #' API Query
 #' @description Duo column data
 #'
+#' @param URL URL
 #' @param series_id Series id of API
 #' @param APIkey API key
 #' @param observation_start Observation start date with
@@ -9,8 +10,9 @@
 #' @export
 #'
 #' @examples
-#' duocol.api(series_id, APIkey, observation_start)
-duocol.api <- function(series_id, APIkey, observation_start){
+#' duocol.api(URL, series_id, APIkey, observation_start)
+#' duocol.api("http://api.eia.gov/series/","TOTAL.TETCBUS.M","4b7fc3dfb09c8ce47ef1323ea2eb5619","197301")
+duocol.api <- function(URL, series_id, APIkey, observation_start){
   parameter = paste(
     "?series_id=", series_id,
     "&api_key=", APIkey,
